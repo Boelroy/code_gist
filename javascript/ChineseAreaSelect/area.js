@@ -28,9 +28,9 @@ ChineseAreaSelect.prototype.changeCity = function()
 	for(var attribute in childList)
 	{
 		item.options[childList[attribute].selectIndex]=new Option(attribute,attribute);
-    }
-    if(item.options.length > 1)
-    	item.options[1].selected = true;
+	}
+	if(item.options.length > 1)
+		item.options[1].selected = true;
 
     this.changeArea();
 };
@@ -50,8 +50,8 @@ ChineseAreaSelect.prototype.changeArea = function()
 	{
 		item.options[childList[attribute]]=new Option(attribute,attribute);
 	}
-    if(item.options.length > 1)
-    	item.options[1].selected = true;
+	if(item.options.length > 1)
+		item.options[1].selected = true;
 };
 
 ChineseAreaSelect.prototype.init = function() 
