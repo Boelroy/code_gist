@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+	<script src="area.js"></script>
+</head>
+<body>
+	<div class="control-group">
+	    <label class="control-label">学校区域</label>
+	    <div class="controls">
+	        <select name="province" id="province" class="span2 m-wap" tabindex="1"></select>
+	        <select class="span2 m-wap" name="city" id="city" ></select>
+	        <select name="country" id="country" class="span2 m-wap"></select>
+	    </div>
+	</div>
+</body>
+<script type="text/javascript">
+	School().init("北京市", "市辖区", "海淀区");
+</script>
+</html>
