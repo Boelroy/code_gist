@@ -27,7 +27,7 @@ ChineseAreaSelect.prototype.changeCity = function()
 	var item = childItem[0];
 	for(var attribute in childList)
 	{
-        item.options[childList[attribute].selectIndex]=new Option(attribute,attribute);
+		item.options[childList[attribute].selectIndex]=new Option(attribute,attribute);
     }
     if(item.options.length > 1)
     	item.options[1].selected = true;
@@ -48,8 +48,8 @@ ChineseAreaSelect.prototype.changeArea = function()
 	var item = childItem[0];
 	for(var attribute in childList)
 	{
-        item.options[childList[attribute]]=new Option(attribute,attribute);
-    }
+		item.options[childList[attribute]]=new Option(attribute,attribute);
+	}
     if(item.options.length > 1)
     	item.options[1].selected = true;
 };
@@ -72,28 +72,28 @@ ChineseAreaSelect.prototype.init = function()
 	var province = $(this.selectIds[0])[0];
 	for(var attribute in this.areaMaps)
     {
-        if(this.areaMaps.hasOwnProperty(attribute))
+    	if(this.areaMaps.hasOwnProperty(attribute))
             province.options[this.areaMaps[attribute].selectIndex]=new Option(attribute,attribute);
     }
 
-    province.options[this.areaMaps[provinceName].selectIndex].selected = true;
+	province.options[this.areaMaps[provinceName].selectIndex].selected = true;
 
-    this.changeCity()
-    var city = $(this.selectIds[1])[0];
-    city.options[this.areaMaps[provinceName].child[cityName].selectIndex].selected = true;
+	this.changeCity()
+	var city = $(this.selectIds[1])[0];
+	city.options[this.areaMaps[provinceName].child[cityName].selectIndex].selected = true;
 
-    this.changeArea()
-    var country = $(this.selectIds[2])[0];
-    country.options[this.areaMaps[provinceName].child[cityName].child[areaName]].selected = true;
+	this.changeArea()
+	var country = $(this.selectIds[2])[0];
+	country.options[this.areaMaps[provinceName].child[cityName].child[areaName]].selected = true;
     
-    var _this = this
-    $(this.selectIds[0]).change(function(){
-    	_this.changeCity()
+	var _this = this
+	$(this.selectIds[0]).change(function(){
+		_this.changeCity()
     });
 
-    $(this.selectIds[1]).change(function(){
-    	_this.changeArea()
-    });
+	$(this.selectIds[1]).change(function(){
+		_this.changeArea()
+	});
 };
 var School = function(){
 
